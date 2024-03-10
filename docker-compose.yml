@@ -1,0 +1,45 @@
+version: "3.7"
+services:
+  backend:
+    image: mori-backend
+    environment:
+      ACCESS_TOKEN_SECRET: Access_Token_Secret_Mori
+      ACCESS_TOKEN_LIFE: 10m
+
+      EMAIL_SERVICE: Gmail
+      EMAIL_USER: bischlien@gmail.com
+      EMAIL_PASS: rjtshtoqxlfvloip
+      JWT_SECRET: jwtMoriBook
+
+      AZURE_STORAGE_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=moristorage123;AccountKey=aC4C/1nK1LktBTWifiMLF6dY7v8rxxbNcf+DQcQgDme+J1pZ+2Ojw5xAt6gUnC6krivcsHLN+EwS+AStSMMNgQ==;EndpointSuffix=core.windows.net
+      AZURE_STORAGE_CONTAINER_NAME_IMG: bookimg
+      AZURE_STORAGE_CONTAINER_NAME_PDF: bookpdf
+      AZURE_STORAGE_CONTAINER_NAME_AUDIO: bookaudio
+      AZURE_STORAGE_CONTAINER_NAME_AVATAR: accountimg
+
+      MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
+      PORT: 10047
+    ports:
+      - 10047:80
+
+  frontend:
+    image: mori-frontend
+    environment:
+      GOOGLE_CLIENT_ID: 581005886543-016nfq2fq93sjroi50n8puejk9n1r9h3.apps.googleusercontent.com
+      BACKEND_URL_DEV: http://backend:10047
+      ADMIN_URL_DEV: http://backend:10047
+      FRONTEND_URL_DEV: http://backend:10047
+    ports:
+      - 10047:80
+
+  admin:
+    image: mori-admin
+    environment:
+      REACT_APP_BACKEND_URL: http://backend:10047
+      REACT_APP_FRONTEND_URL: http://backend:10047
+      REACT_APP_ADMIN_URL: http://backend:10047
+      PORT: 10047
+    depends_on:
+      - backend
+    ports:
+      - 10047:80
