@@ -52,5 +52,5 @@ services:
 
 networks:
   backend_network:
-    driver: bridge
+    internal: true
 
