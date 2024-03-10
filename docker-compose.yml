@@ -52,5 +52,3 @@ services:
 
 networks:
   backend_network:
-    internal: true
-
