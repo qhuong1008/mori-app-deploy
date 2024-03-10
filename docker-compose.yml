@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   backend:
-    image: nguyenlien/mori-backend
+    image: qhuong1008/mori-backend
     networks:
       - abc
     environment:
@@ -21,7 +21,7 @@ services:
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
 
   frontend:
-    image: nguyenlien/mori-frontend
+    image: qhuong1008/mori-frontend
     networks:
       - abc
     environment:
@@ -31,7 +31,7 @@ services:
       FRONTEND_URL_DEV: http://backend
 
   admin:
-    image: nguyenlien/mori-admin
+    image: qhuong1008/mori-admin
     networks:
       - abc
     environment:
