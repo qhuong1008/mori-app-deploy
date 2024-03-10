@@ -18,7 +18,6 @@ services:
       AZURE_STORAGE_CONTAINER_NAME_AVATAR: accountimg
 
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
-      PORT: 10047
 
   frontend:
     image: qhuong1008/mori-frontend
