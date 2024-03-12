@@ -19,6 +19,8 @@ services:
       AZURE_STORAGE_CONTAINER_NAME_AUDIO: bookaudio
       AZURE_STORAGE_CONTAINER_NAME_AVATAR: accountimg
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
+      FRONTEND_URL: http://backend
+      ADMIN_URL: http://backend
 
   frontend:
     image: qhuong1008/mori-frontend
