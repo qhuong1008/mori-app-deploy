@@ -3,7 +3,7 @@ services:
   backend:
     image: qhuong1008/mori-backend
     networks:
-      - abc
+      - backend_network
     environment:
       ACCESS_TOKEN_SECRET: Access_Token_Secret_Mori
       ACCESS_TOKEN_LIFE: 10m
@@ -20,11 +20,13 @@ services:
       AZURE_STORAGE_CONTAINER_NAME_AVATAR: accountimg
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
       ALLOW_ORIGIN_TOKEN: huonglienhcmutefit12321
+      FRONTEND_URL: http://backend
+      ADMIN_URL: http://backend
 
   frontend:
     image: qhuong1008/mori-frontend
     networks:
-      - abc
+      - backend_network
     environment:
       GOOGLE_CLIENT_ID: 581005886543-016nfq2fq93sjroi50n8puejk9n1r9h3.apps.googleusercontent.com
       BACKEND_URL_DEV: http://backend
@@ -35,7 +37,7 @@ services:
   admin:
     image: qhuong1008/mori-admin
     networks:
-      - abc
+      - backend_network
     environment:
       REACT_APP_BACKEND_URL: http://backend
       REACT_APP_FRONTEND_URL: http://backend
@@ -45,8 +47,9 @@ services:
       - backend
   nginx:
     image: nginx:latest
+    restart: always
     networks:
-      - abc
+      - backend_network
     ports:
       - 10047:80
     volumes:
@@ -54,3 +57,4 @@ services:
 
 networks:
   abc: {}
+  backend_network:
