@@ -20,7 +20,7 @@ services:
       AZURE_STORAGE_CONTAINER_NAME_AUDIO: bookaudio
       AZURE_STORAGE_CONTAINER_NAME_AVATAR: accountimg
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
-      ALLOW_ORIGIN_TOKEN: huonglienhcmutefit12321
+      ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
       FRONTEND_URL: http://103.130.211.150:10047/
       ADMIN_URL: http://103.130.211.150:10047/
 
@@ -33,7 +33,7 @@ services:
       BACKEND_URL_DEV: http://103.130.211.150:10047/
       ADMIN_URL_DEV: http://103.130.211.150:10047/
       FRONTEND_URL_DEV: http://103.130.211.150:10047/
-      ALLOW_ORIGIN_TOKEN: huonglienhcmutefit12321
+      ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
 
   admin:
     image: qhuong1008/mori-admin
@@ -43,7 +43,7 @@ services:
       REACT_APP_BACKEND_URL: http://103.130.211.150:10047/
       REACT_APP_FRONTEND_URL: http://103.130.211.150:10047/
       REACT_APP_ADMIN_URL: http://103.130.211.150:10047/
-      REACT_APP_ALLOW_ORIGIN_TOKEN: huonglienhcmutefit12321
+      REACT_APP_ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
       REACT_APP_JWT_SECRET: hcmutefitmoriauth
     depends_on:
       - backend
