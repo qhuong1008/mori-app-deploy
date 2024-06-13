@@ -23,6 +23,7 @@ services:
       ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
       FRONTEND_URL: https://ebook.workon.space/
       ADMIN_URL: https://ebook.workon.space/
+      NLP_URL: https://ebook.workon.space/
 
   frontend:
     image: qhuong1008/mori-frontend
