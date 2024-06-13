@@ -48,6 +48,14 @@ services:
       REACT_APP_JWT_SECRET: hcmutefitmoriauth
     depends_on:
       - backend
+
+  nlp:
+    image: qhuong1008/mori-nlp
+    networks:
+      - backend_network
+    depends_on:
+      - backend
+
   nginx:
     image: nginx:latest
     restart: always
