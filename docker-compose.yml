@@ -26,6 +26,8 @@ services:
       ADMIN_URL: https://ebook.workon.space
       NLP_URL: https://ebook.workon.space
       FPT_API_KEY: fL8pbnvvIQhak30mjZALVBAAH2bhozwK
+    volumes:
+      - ./config:/app/config
 
   frontend:
     image: qhuong1008/mori-frontend
