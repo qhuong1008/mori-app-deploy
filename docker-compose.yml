@@ -21,9 +21,9 @@ services:
       AZURE_STORAGE_CONTAINER_NAME_AVATAR: accountimg
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
       ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
-      FRONTEND_URL: https://ebook.workon.space/
-      BACKEND_URL: https://ebook.workon.space/
-      ADMIN_URL: https://ebook.workon.space/
+      FRONTEND_URL: https://ebook.workon.space
+      BACKEND_URL: https://ebook.workon.space
+      ADMIN_URL: https://ebook.workon.space
       NLP_URL: https://ebook.workon.space
       FPT_API_KEY: fL8pbnvvIQhak30mjZALVBAAH2bhozwK
 
@@ -33,9 +33,9 @@ services:
       - backend_network
     environment:
       GOOGLE_CLIENT_ID: 581005886543-016nfq2fq93sjroi50n8puejk9n1r9h3.apps.googleusercontent.com
-      BACKEND_URL_DEV: https://ebook.workon.space/
-      ADMIN_URL_DEV: https://ebook.workon.space/
-      FRONTEND_URL_DEV: https://ebook.workon.space/
+      BACKEND_URL_DEV: https://ebook.workon.space
+      ADMIN_URL_DEV: https://ebook.workon.space
+      FRONTEND_URL_DEV: https://ebook.workon.space
       ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
 
   admin:
@@ -43,9 +43,9 @@ services:
     networks:
       - backend_network
     environment:
-      REACT_APP_BACKEND_URL: https://ebook.workon.space/
-      REACT_APP_FRONTEND_URL: https://ebook.workon.space/
-      REACT_APP_ADMIN_URL: https://ebook.workon.space/
+      REACT_APP_BACKEND_URL: https://ebook.workon.space
+      REACT_APP_FRONTEND_URL: https://ebook.workon.space
+      REACT_APP_ADMIN_URL: https://ebook.workon.space
       REACT_APP_ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
       REACT_APP_JWT_SECRET: hcmutefitmoriauth
 
