@@ -22,7 +22,7 @@ services:
       MONGODB_URL: mongodb+srv://moribook:Mori123456@cluster0.xdqbzc5.mongodb.net/moridb
       ALLOW_ORIGIN_TOKEN: huonglienhcmutefit123
       FRONTEND_URL: https://ebook.workon.space/
-      BACKEND_URL: http://localhost:8080
+      BACKEND_URL: https://ebook.workon.space/
       ADMIN_URL: https://ebook.workon.space/
       NLP_URL: https://ebook.workon.space/
       FPT_API_KEY: fL8pbnvvIQhak30mjZALVBAAH2bhozwK
